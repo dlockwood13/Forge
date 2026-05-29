@@ -332,6 +332,72 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
 .maxim .another:active{transform:scale(.95);border-color:var(--bronze-deep);color:var(--bronze-hi)}
 .maxim.flip .latin,.maxim.flip .trans,.maxim.flip .who,.maxim.flip .gloss{animation:maximIn .55s var(--ease) both}
 @keyframes maximIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* maxim favourite star */
+.maxim .star{position:absolute;top:16px;right:16px;width:30px;height:30px;border:none;background:rgba(0,0,0,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.maxim .star svg{width:17px;height:17px;color:var(--text-3);transition:.2s var(--ease);fill:none;stroke:currentColor;stroke-width:1.7}
+.maxim .star.on svg{color:var(--bronze-hi);fill:var(--bronze-hi)}
+.maxim .star:active{transform:scale(.88)}
+
+/* recovery banner (never miss twice) */
+.recover{display:none;border-radius:var(--radius);padding:16px 18px;margin-bottom:14px;border:1px solid;position:relative;overflow:hidden}
+.recover.show{display:block;animation:rise .5s var(--ease) both}
+.recover.soft{background:rgba(203,161,90,.08);border-color:rgba(203,161,90,.32)}
+.recover.hard{background:rgba(217,116,59,.1);border-color:rgba(217,116,59,.42)}
+.recover .rt{font-family:"Fraunces";font-style:italic;font-size:17px;line-height:1.32;margin-bottom:5px}
+.recover.soft .rt{color:var(--bronze-hi)}.recover.hard .rt{color:var(--ember)}
+.recover .rb{font-size:13px;color:var(--text-2);line-height:1.5}
+
+/* rank bar */
+.rankbar{display:flex;align-items:center;gap:13px;padding:14px 16px;margin-bottom:14px;background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--line-soft);border-radius:var(--radius-s)}
+.rankbar .crest{width:40px;height:40px;flex:none}
+.rankbar .ri{flex:1;min-width:0}
+.rankbar .ri .rn{font-family:"Fraunces";font-weight:600;font-size:17px;color:var(--bronze-hi);line-height:1}
+.rankbar .ri .rn small{font-family:"Hanken Grotesk";font-weight:500;color:var(--text-3);font-size:11.5px;font-style:normal}
+.rankbar .rp{height:5px;border-radius:3px;background:var(--bg-2);margin-top:9px;overflow:hidden}
+.rankbar .rp i{display:block;height:100%;background:linear-gradient(90deg,var(--bronze-deep),var(--bronze-hi));border-radius:3px;transition:width .5s var(--ease)}
+.rankbar .nxt{font-size:10.5px;color:var(--text-3);margin-top:6px;letter-spacing:.02em}
+
+/* ladder */
+.ladder .lr{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.ladder .lr:last-child{border-bottom:none}
+.ladder .lr .lc{width:22px;height:22px;flex:none;opacity:.4}
+.ladder .lr.done .lc{opacity:1}
+.ladder .lr.cur{background:rgba(203,161,90,.06);margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:8px}
+.ladder .lr .ln2{flex:1}
+.ladder .lr .ln2 b{font-family:"Fraunces";font-weight:500;font-size:15px}
+.ladder .lr.done .ln2 b{color:var(--bronze-hi)}
+.ladder .lr .ln2 span{display:block;font-size:11px;color:var(--text-3)}
+.ladder .lr .lt{font-family:"JetBrains Mono";font-size:11px;color:var(--text-3)}
+.ladder .lr.cur .lt{color:var(--ember)}
+
+/* charts */
+.chart{margin-top:6px}
+.chart + .chart{margin-top:20px}
+.chart .ct{font-size:11.5px;font-weight:600;color:var(--text-2);letter-spacing:.04em;margin-bottom:12px;display:flex;justify-content:space-between}
+.chart .ct .cv{color:var(--text-3);font-family:"JetBrains Mono";font-weight:400}
+.bars{display:flex;align-items:flex-end;gap:6px;height:104px;position:relative}
+.bars .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;height:100%}
+.bars .col .bk{width:100%;max-width:26px;flex:1;align-self:center;background:var(--surface-2);border-radius:5px 5px 0 0;position:relative;overflow:hidden;min-height:2px}
+.bars .col .bk i{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,var(--bronze-hi),var(--bronze-deep));border-radius:5px 5px 0 0}
+.bars .col.hit .bk i{background:linear-gradient(180deg,var(--sage),#5f7a48)}
+.bars .col .lx{font-size:8.5px;color:var(--text-3);font-family:"JetBrains Mono"}
+.target-line{position:absolute;left:0;right:0;border-top:1px dashed rgba(203,161,90,.5);pointer-events:none}
+.target-line span{position:absolute;right:0;top:-14px;font-size:8.5px;color:var(--bronze);font-family:"JetBrains Mono"}
+.hbar{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.hbar .hl{width:74px;font-size:12px;color:var(--text-2);flex:none}
+.hbar .ht{flex:1;height:9px;border-radius:5px;background:var(--bg-2);overflow:hidden}
+.hbar .ht i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--bronze-deep),var(--bronze-hi))}
+.hbar .hp{width:38px;text-align:right;font-family:"JetBrains Mono";font-size:12px;color:var(--bronze-hi);flex:none}
+.insight{margin-top:14px;padding:13px;background:var(--bg-2);border:1px solid var(--line-soft);border-radius:12px;font-size:12.5px;line-height:1.55;color:var(--text-2)}
+.insight b{color:var(--bronze-hi)}
+
+/* saved maxims */
+.saved{background:var(--bg-2);border:1px solid var(--line-soft);border-radius:13px;padding:13px 14px;margin-bottom:9px;position:relative}
+.saved .sl{font-family:"Fraunces";font-style:italic;font-size:15.5px;color:var(--bronze-hi);line-height:1.32;padding-right:24px}
+.saved .se{font-size:12.5px;color:var(--text);margin-top:5px;line-height:1.4}
+.saved .sw{font-family:"JetBrains Mono";font-size:10px;color:var(--text-3);margin-top:6px}
+.saved .unstar{position:absolute;top:11px;right:11px;color:var(--text-3);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:16px}
 </style>
 </head>
 <body>
@@ -357,6 +423,8 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
   <!-- ============ TODAY ============ -->
   <div class="view active" id="view-today">
     <div class="stagger">
+      <div class="recover" id="recover"><div class="rt" id="recoverT"></div><div class="rb" id="recoverB"></div></div>
+
       <div class="card hero">
         <svg class="edit" id="editIdentity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
         <div class="date" id="todayDate">—</div>
@@ -365,6 +433,7 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
       </div>
 
       <div class="card maxim" id="maximCard">
+        <button class="star" id="maximStar" aria-label="Favourite"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8-4.3-4.1 5.9-.9z"/></svg></button>
         <div class="orn">✦</div>
         <div class="day" id="maximDay">Maxim of the day</div>
         <div class="latin" id="maximLatin">—</div>
@@ -378,6 +447,15 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
         <div class="pill"><div class="num ember" id="streakNum">0<span>🔥</span></div><div class="lbl">Day streak</div></div>
         <div class="pill"><div class="num" id="votesNum">0</div><div class="lbl">Identity votes</div></div>
         <div class="pill"><div class="num" id="bestNum">0</div><div class="lbl">Best run</div></div>
+      </div>
+
+      <div class="rankbar" id="rankBar">
+        <svg class="crest" id="rankCrest" viewBox="0 0 40 40"></svg>
+        <div class="ri">
+          <div class="rn" id="rankName">Tiro <small id="rankSub">· Recruit</small></div>
+          <div class="rp"><i id="rankFill"></i></div>
+          <div class="nxt" id="rankNext"></div>
+        </div>
       </div>
 
       <div class="card keystone">
@@ -628,6 +706,34 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
         <div id="journal"></div>
       </div>
 
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-6-3.5L6 18.5 7.5 12.5 3 8.5 9 8z"/></svg><h2>The Cursus · Ranks</h2></div>
+        <div class="note" style="margin-top:0;margin-bottom:14px">Your rank rises with every day you show up — cumulative votes for your identity. It never falls.</div>
+        <div class="ladder" id="ladder"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 2 4-6"/></svg><h2>Trends</h2></div>
+        <div class="chart">
+          <div class="ct"><span>Minutes per week</span><span class="cv" id="trAvgMin">—</span></div>
+          <div class="bars" id="weekBars"></div>
+        </div>
+        <div class="chart">
+          <div class="ct"><span>Pillars hit · last 14 days</span><span class="cv">show up · plate · water</span></div>
+          <div class="bars" id="pillarBars"></div>
+        </div>
+        <div class="chart">
+          <div class="ct"><span>Consistency · last 30 days</span><span class="cv" id="trDays">—</span></div>
+          <div id="consist"></div>
+        </div>
+        <div class="insight" id="insight" style="display:none"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8-4.3-4.1 5.9-.9z"/></svg><h2>Saved Maxims</h2></div>
+        <div id="savedList"></div>
+      </div>
+
       <div class="card stoic">
         <div class="tag">Marcus Aurelius</div>
         <div class="quote">Waste no more time arguing about what a good person should be. Be one.</div>
@@ -714,6 +820,8 @@ function save(){ Store.set(KEY,S); }
   if(S.sign===undefined)S.sign="";
   if(S.notif===undefined)S.notif=false;
   if(!S.timerDur)S.timerDur=10;
+  if(!S.favMaxims)S.favMaxims=[];
+  if(S.rankSeen===undefined)S.rankSeen=0;
   save();
 })();
 
@@ -955,6 +1063,133 @@ function renderMaxim(animate){
     ? 'Maxim of the day · '+new Date().toLocaleDateString(undefined,{month:'short',day:'numeric'}).toUpperCase()
     : 'More firepower';
   if(animate){ const c=document.getElementById('maximCard'); c.classList.remove('flip'); void c.offsetWidth; c.classList.add('flip'); }
+  // star state
+  const fav=S.favMaxims.includes(m.la);
+  document.getElementById('maximStar').classList.toggle('on',fav);
+  document.getElementById('maximCard').dataset.la=m.la;
+}
+function toggleFavMaxim(){
+  const la=document.getElementById('maximCard').dataset.la; if(!la) return;
+  const i=S.favMaxims.indexOf(la);
+  if(i>-1){ S.favMaxims.splice(i,1); toast('Removed from saved'); }
+  else { S.favMaxims.push(la); celebrate('Saved to your collection'); }
+  save(); renderMaxim(false); renderSaved();
+}
+function renderSaved(){
+  const el=document.getElementById('savedList'); if(!el) return;
+  if(!S.favMaxims.length){ el.innerHTML='<div class="jrn-empty">Star the maxims that hit hardest — they collect here.</div>'; return; }
+  el.innerHTML=S.favMaxims.map(la=>{
+    const m=MAXIMS.find(x=>x.la===la); if(!m) return '';
+    return '<div class="saved"><div class="unstar" data-unstar="'+esc(la)+'">★</div><div class="sl">“'+esc(m.la)+'”</div><div class="se">'+esc(m.en)+'</div><div class="sw">— '+esc(m.who)+'</div></div>';
+  }).join('');
+}
+
+/* ---------- ranks ---------- */
+const RANKS=[
+ {t:0,n:"Tiro",s:"Recruit"},
+ {t:3,n:"Miles",s:"Soldier"},
+ {t:7,n:"Legionarius",s:"Legionary"},
+ {t:14,n:"Decanus",s:"Leader of ten"},
+ {t:30,n:"Optio",s:"Second-in-command"},
+ {t:50,n:"Centurio",s:"Centurion"},
+ {t:75,n:"Primus Pilus",s:"First spear"},
+ {t:100,n:"Tribunus",s:"Tribune"},
+ {t:150,n:"Legatus",s:"Legate"},
+ {t:250,n:"Imperator",s:"Commander"}
+];
+function rankIndex(v){ let i=0; for(let k=0;k<RANKS.length;k++){ if(v>=RANKS[k].t) i=k; } return i; }
+function crestSVG(idx){
+  // laurel-ringed crest, fills with bronze by tier
+  const lit=Math.min(5,Math.round(idx/2)+1);
+  let stars=''; for(let i=0;i<lit;i++){ const x=20+(i-(lit-1)/2)*5; stars+='<circle cx="'+x.toFixed(1)+'" cy="14" r="1.3" fill="#E7C988"/>'; }
+  return '<circle cx="20" cy="20" r="15" fill="none" stroke="#9A7637" stroke-width="1.3"/>'+
+    '<path d="M9 24c-3-3-3-8 0-11" fill="none" stroke="#CBA15A" stroke-width="1.4" stroke-linecap="round"/>'+
+    '<path d="M31 24c3-3 3-8 0-11" fill="none" stroke="#CBA15A" stroke-width="1.4" stroke-linecap="round"/>'+
+    '<path d="M14 27l6-4 6 4-2.3-7L29 16h-7l-2-6-2 6h-7l5.3 4z" fill="#CBA15A" opacity="'+(0.35+idx*0.07).toFixed(2)+'"/>'+stars;
+}
+function renderRank(){
+  const v=totalShowUp(), idx=rankIndex(v), r=RANKS[idx], next=RANKS[idx+1];
+  document.getElementById('rankCrest').innerHTML=crestSVG(idx);
+  document.getElementById('rankName').innerHTML=esc(r.n)+' <small>· '+esc(r.s)+'</small>';
+  if(next){
+    const span=next.t-r.t, prog=Math.max(0,Math.min(100,(v-r.t)/span*100));
+    document.getElementById('rankFill').style.width=prog+'%';
+    document.getElementById('rankNext').textContent=(next.t-v)+' more day'+((next.t-v)===1?'':'s')+' to '+next.n;
+  } else {
+    document.getElementById('rankFill').style.width='100%';
+    document.getElementById('rankNext').textContent='Highest rank attained. Imperator.';
+  }
+  // milestone celebration on crossing
+  if(idx>S.rankSeen){
+    S.rankSeen=idx; save();
+    setTimeout(()=>{ celebrate('New rank: '+r.n+' — '+r.s); notify('FORGE · Rank up','You rose to '+r.n+' ('+r.s+'). '+v+' votes cast for who you are.'); },400);
+  }
+}
+function renderLadder(){
+  const el=document.getElementById('ladder'); if(!el) return;
+  const v=totalShowUp(), cur=rankIndex(v);
+  el.innerHTML=RANKS.map((r,i)=>{
+    const done=v>=r.t;
+    return '<div class="lr '+(done?'done':'')+' '+(i===cur?'cur':'')+'">'+
+      '<svg class="lc" viewBox="0 0 40 40">'+crestSVG(i)+'</svg>'+
+      '<div class="ln2"><b>'+esc(r.n)+'</b><span>'+esc(r.s)+'</span></div>'+
+      '<div class="lt">'+(done?'✓':r.t+'d')+'</div></div>';
+  }).join('');
+}
+
+/* ---------- trends ---------- */
+function dForDaysAgo(i){ const d=new Date(); d.setDate(d.getDate()-i); return S.days[key(d)]; }
+function plateFull(d){ return d&&d.meals&&d.meals.every(m=>m.p&&m.f&&m.c); }
+function renderTrends(){
+  // weekly minutes, last 8 weeks (Mon-anchored)
+  const now=new Date(); const dow=(now.getDay()+6)%7;
+  const weeks=[]; let totalAll=0,wkCount=0;
+  for(let w=7;w>=0;w--){
+    let sum=0;
+    for(let day=0;day<7;day++){
+      const off=w*7 + (dow-day); if(off<0) continue;
+      const dt=new Date(); dt.setDate(now.getDate()-off);
+      const d=S.days[key(dt)]; if(d) sum+=d.min||0;
+    }
+    weeks.push(sum); if(w>0){totalAll+=sum;wkCount++;}
+  }
+  const maxW=Math.max(180,...weeks);
+  const bars=document.getElementById('weekBars');
+  let h=''; const labels=['7w','6w','5w','4w','3w','2w','last','now'];
+  weeks.forEach((m,i)=>{ const pct=Math.round(m/maxW*100);
+    h+='<div class="col '+(m>=180?'hit':'')+'"><div class="bk"><i style="height:'+pct+'%"></i></div><div class="lx">'+labels[i]+'</div></div>'; });
+  bars.innerHTML=h;
+  const avg=wkCount?Math.round(totalAll/wkCount):0;
+  document.getElementById('trAvgMin').textContent='avg '+avg+'/wk · goal 180';
+
+  // pillars last 14 days
+  const pb=document.getElementById('pillarBars'); let ph='';
+  for(let i=13;i>=0;i--){ const d=dForDaysAgo(i); let p=0; if(d){ if(d.gym)p++; if(plateFull(d))p++; if(d.water>=12)p++; }
+    const pct=Math.round(p/3*100);
+    ph+='<div class="col '+(p===3?'hit':'')+'"><div class="bk"><i style="height:'+Math.max(pct,p?8:0)+'%"></i></div><div class="lx">'+(i===0?'·':'')+'</div></div>'; }
+  pb.innerHTML=ph;
+
+  // consistency last 30 days
+  let g=0,pl=0,wa=0,tot=0;
+  for(let i=0;i<30;i++){ const d=dForDaysAgo(i); if(!d) continue; tot++; if(d.gym)g++; if(plateFull(d))pl++; if(d.water>=12)wa++; }
+  const denom=Math.max(tot,1);
+  const rows=[['Showed up',g],['Full plate',pl],['Hydrated',wa]];
+  document.getElementById('consist').innerHTML=rows.map(r=>{
+    const pc=Math.round(r[1]/denom*100);
+    return '<div class="hbar"><div class="hl">'+r[0]+'</div><div class="ht"><i style="width:'+pc+'%"></i></div><div class="hp">'+pc+'%</div></div>';
+  }).join('');
+  document.getElementById('trDays').textContent=tot+' tracked';
+
+  // behavioural insight: show-up rate with vs without morning premeditation
+  let mY=0,mYg=0,mN=0,mNg=0;
+  Object.values(S.days).forEach(d=>{ const hasM=(d.morning&&d.morning.trim().length>0);
+    if(hasM){ mY++; if(d.gym)mYg++; } else { mN++; if(d.gym)mNg++; } });
+  const ins=document.getElementById('insight');
+  if(mY>=3 && mN>=3){
+    const rY=Math.round(mYg/mY*100), rN=Math.round(mNg/mN*100);
+    if(rY-rN>=10){ ins.style.display='block'; ins.innerHTML='On days you wrote a <b>morning premeditation</b>, you showed up <b>'+rY+'%</b> of the time — versus <b>'+rN+'%</b> on days you skipped it. The two-minute ritual is pulling its weight.'; }
+    else ins.style.display='none';
+  } else ins.style.display='none';
 }
 
 function renderMeals(){
@@ -1216,6 +1451,24 @@ function renderProgress(){
 }
 
 /* ---------- stats helpers ---------- */
+function renderRecover(){
+  const el=document.getElementById('recover'); if(!el) return;
+  const today=D();
+  const y=dForDaysAgo(1), dby=dForDaysAgo(2);
+  const missedY = !(y&&y.gym);
+  const missedDBY = !(dby&&dby.gym);
+  el.className='recover';
+  if(today.gym){ return; }            // already won today — no nudge
+  if(missedY && missedDBY){
+    el.classList.add('show','hard');
+    document.getElementById('recoverT').textContent='Two days down. This is where habits die.';
+    document.getElementById('recoverB').textContent='Not the missed day — the second one. Break the spiral now: just show up for ten minutes. Don\'t miss a third.';
+  } else if(missedY){
+    el.classList.add('show','soft');
+    document.getElementById('recoverT').textContent='You missed yesterday. Never miss twice.';
+    document.getElementById('recoverB').textContent='One slip is an accident; two is the start of a new habit. Reclaim it today — ten minutes is a full win.';
+  }
+}
 function totalShowUp(){ return count(d=>d.gym); }
 function count(fn){ return Object.values(S.days).filter(fn).length; }
 function weekMinutes(){
@@ -1256,7 +1509,7 @@ function burst(){
   }
 }
 
-function rerenderToday(){ renderHero(); renderStreak(); renderKeystone(); renderMeals(); renderWater(); renderCues(); renderEnv(); save(); }
+function rerenderToday(){ renderHero(); renderStreak(); renderKeystone(); renderMeals(); renderWater(); renderCues(); renderEnv(); renderRank(); renderRecover(); save(); }
 
 /* delegation */
 document.addEventListener('click', e=>{
@@ -1298,6 +1551,9 @@ document.addEventListener('click', e=>{
   if(dp){ document.querySelectorAll('#durPick button').forEach(b=>b.classList.remove('sel')); dp.classList.add('sel'); Timer.setDur(+dp.dataset.d); return; }
 
   // motivation
+  if(t.closest('#maximStar')){ toggleFavMaxim(); return; }
+  const us=t.closest('[data-unstar]');
+  if(us){ const la=us.dataset.unstar; const i=S.favMaxims.indexOf(la); if(i>-1)S.favMaxims.splice(i,1); save(); renderSaved(); renderMaxim(false); toast('Removed from saved'); return; }
   if(t.closest('#maximAnother')){ maximOffset++; renderMaxim(true); if(navigator.vibrate)navigator.vibrate(8); return; }
   if(t.closest('#motivateBtn')){ openMotivate(); return; }
   if(t.closest('#mvtClose')){ document.getElementById('motivateModal').classList.remove('open'); return; }
@@ -1379,7 +1635,7 @@ function switchView(v){
   window.scrollTo({top:0,behavior:'instant'});
   if(v==='system')renderSystem();
   if(v==='reflect')renderReflect();
-  if(v==='progress'){ renderProgress(); renderJournal(); }
+  if(v==='progress'){ renderProgress(); renderJournal(); renderLadder(); renderTrends(); renderSaved(); }
 }
 
 /* ---------- helpers ---------- */
@@ -1390,7 +1646,8 @@ function clear(ids){ ids.forEach(i=>document.getElementById(i).value=''); }
 
 /* ---------- init ---------- */
 function init(){
-  renderHero(); renderStreak(); renderKeystone(); renderStoic(); renderMaxim(); renderMeals(); renderWater(); renderCues(); renderEnv();
+  if(S.rankSeen===0) S.rankSeen=rankIndex(totalShowUp());
+  renderHero(); renderStreak(); renderKeystone(); renderStoic(); renderMaxim(); renderMeals(); renderWater(); renderCues(); renderEnv(); renderRank(); renderRecover();
   Timer.init();
   save();
   if(!S.identity){ setTimeout(openIdentity,500); }

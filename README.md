@@ -50,3 +50,5 @@ Phone browsers (especially iOS Safari) **cannot reliably wake a closed web app t
 The top of the Today screen shows a **daily Latin maxim** — the Latin, a translation, the source, and a short psychology/philosophy gloss. There are **130 genuine, sourced maxims** (Seneca, Horace, Ovid, Cicero, Virgil, Publilius Syrus, classical proverbs and mottos). They rotate so every day shows a different one, with **no repeat for ~4 months** straight. Tap **Another** for extra firepower on any given day.
 
 The **morning reminder** (06:30 by default) delivers that day's maxim right in the notification, so your first nudge of the day is a line of Latin firepower plus your intention prompt.
+
+
