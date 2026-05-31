@@ -398,6 +398,48 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
 .saved .se{font-size:12.5px;color:var(--text);margin-top:5px;line-height:1.4}
 .saved .sw{font-family:"JetBrains Mono";font-size:10px;color:var(--text-3);margin-top:6px}
 .saved .unstar{position:absolute;top:11px;right:11px;color:var(--text-3);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:16px}
+
+/* ---- anchor / steady section ---- */
+.breathe-card{text-align:center}
+.breath-stage{height:196px;display:flex;align-items:center;justify-content:center;position:relative;margin:4px 0 14px}
+.breath-orb{width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 36% 30%, rgba(143,168,118,.75), rgba(143,168,118,.12));border:1px solid rgba(143,168,118,.45);transform:scale(.55);transition:transform 4s cubic-bezier(.4,0,.4,1);box-shadow:0 0 70px -12px rgba(143,168,118,.55)}
+.breath-word{position:absolute;font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--text);letter-spacing:.01em}
+.worth-item{display:flex;gap:10px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line-soft);border-radius:12px;padding:11px 12px;margin-bottom:8px}
+.worth-item .bd{flex:1}
+.worth-item .wd{font-family:'JetBrains Mono';font-size:9px;color:var(--bronze);letter-spacing:.1em;margin-bottom:3px;text-transform:uppercase}
+.worth-item .wt{font-size:13.5px;line-height:1.45;color:var(--text)}
+.worth-item .wx{color:var(--text-3);font-size:17px;flex:none;width:24px;text-align:center}
+.resources{margin-top:16px;padding:14px;border-radius:12px;background:rgba(217,116,59,.07);border:1px solid rgba(217,116,59,.28);font-size:12.5px;line-height:1.6;color:var(--text-2)}
+.resources b{color:var(--ember)}
+.trust-show{margin-top:12px;padding:13px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line-soft);font-size:14px;line-height:1.5}
+.trust-show b{color:var(--bronze-hi)}.trust-show a{color:var(--bronze-hi);text-decoration:none}
+
+/* ---- codex reader ---- */
+.header-actions{display:flex;align-items:center;gap:8px}
+.codex-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);display:flex;align-items:center;justify-content:center}
+.codex-btn svg{width:17px;height:17px;color:var(--bronze-hi)}
+.codex-wrap{position:fixed;inset:0;z-index:70;background:var(--bg);display:none;overflow-y:auto}
+.codex-wrap.open{display:block;animation:fade .25s}
+.codex{max-width:520px;margin:0 auto;min-height:100%;padding:0 18px calc(40px + env(safe-area-inset-bottom))}
+.codex-bar{position:sticky;top:0;background:linear-gradient(180deg,var(--bg),rgba(16,14,11,.88));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top) + 16px) 2px 12px;z-index:2;border-bottom:1px solid var(--line-soft);margin-bottom:18px}
+.codex-bar .ttl{font-family:'Fraunces';font-size:16px;letter-spacing:.06em}
+.codex-bar button{background:none;border:none;color:var(--text-2);font-family:inherit;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer}
+.codex-bar .x{font-size:25px;color:var(--text-3);line-height:1}
+.reading-item{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--line-soft);border-radius:var(--radius);padding:18px;margin-bottom:12px;cursor:pointer;transition:border-color .2s}
+.reading-item:active{border-color:var(--bronze-deep)}
+.reading-item .yr{font-family:'JetBrains Mono';font-size:10px;color:var(--bronze);letter-spacing:.12em;margin-bottom:8px}
+.reading-item h3{font-family:'Fraunces';font-weight:500;font-size:20px;margin-bottom:4px}
+.reading-item p{font-size:13px;color:var(--text-3);line-height:1.45}
+.article{animation:rise .4s var(--ease) both}
+.article .at{font-family:'Fraunces';font-weight:500;font-size:26px;line-height:1.2;margin-bottom:6px;letter-spacing:-.01em}
+.article .asub{font-family:'JetBrains Mono';font-size:10.5px;color:var(--bronze);letter-spacing:.1em;margin-bottom:20px;text-transform:uppercase}
+.article h3{font-family:'Fraunces';font-weight:600;font-size:17px;color:var(--bronze-hi);margin:24px 0 8px}
+.article p{font-size:14.5px;line-height:1.64;color:var(--text-2);margin-bottom:12px}
+.article p b,.article li b{color:var(--text)}
+.article ul{margin:0 0 12px;padding:0;list-style:none}
+.article li{font-size:14px;line-height:1.56;color:var(--text-2);margin-bottom:10px;padding-left:18px;position:relative}
+.article li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--bronze)}
+.article .pull{font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--text);border-left:2px solid var(--bronze-deep);padding-left:14px;margin:18px 0;line-height:1.42}
 </style>
 </head>
 <body>
@@ -417,7 +459,10 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
         <div class="sub">Forge the self</div>
       </div>
     </div>
-    <button class="install-btn" id="installBtn">⤓ Install</button>
+    <div class="header-actions">
+      <button class="codex-btn" id="codexBtn" aria-label="Codex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5a2 2 0 0 1 2-2h13v17H6a2 2 0 0 0-2 2z"/><path d="M19 17H6a2 2 0 0 0-2 2"/></svg></button>
+      <button class="install-btn" id="installBtn">⤓ Install</button>
+    </div>
   </header>
 
   <!-- ============ TODAY ============ -->
@@ -740,6 +785,72 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
       </div>
     </div>
   </div>
+
+  <!-- ============ ANCHOR ============ -->
+  <div class="view" id="view-anchor">
+    <div class="stagger">
+      <div class="card hero" style="padding:22px">
+        <div class="eyebrow">When the ground feels uneven</div>
+        <div class="identity" style="font-size:22px">This is a hard <span class="accent">moment</span> —<br>not the truth about you.</div>
+        <div class="why">Low mood is an unreliable narrator: it hides the evidence and magnifies the gaps. Let's steady you, gently, one step at a time. Nothing here has to be earned.</div>
+      </div>
+
+      <div class="card breathe-card">
+        <div class="card-h" style="justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3a4 4 0 0 0-4 4c0 3-5 3-5 7a5 5 0 0 0 9 3 5 5 0 0 0 9-3c0-4-5-4-5-7a4 4 0 0 0-4-4Z"/></svg><h2>Steady the breath</h2></div>
+        <div class="breath-stage"><div class="breath-orb" id="breathOrb"></div><div class="breath-word" id="breathWord">Ready</div></div>
+        <button class="solid-btn" id="breathBtn">Begin · 4 rounds</button>
+        <div class="note">Box breathing — in for 4, hold 4, out 4, hold 4. It signals your nervous system that you're safe, and slows the spin.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg><h2>The kinder, truer voice</h2></div>
+        <div class="refl-q">What's the harsh thing the low voice is saying right now?</div>
+        <textarea id="harshThought" rows="2" placeholder="e.g. &quot;I don't add any value to anyone.&quot;"></textarea>
+        <div class="refl-q" style="margin-top:14px">Now — what would you say to a friend you love who believed that about themselves?</div>
+        <textarea id="kindThought" rows="3" placeholder="You'd never agree they were worthless. Say to yourself what you'd say to them."></textarea>
+        <div class="insight" style="display:block">Your worth isn't a performance review. It isn't earned by output, usefulness, or productivity. You had it this morning before you did a single thing, and you'll have it tomorrow no matter what today looks like.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h13l3 3v13H4z"/><path d="M8 10h8M8 14h5"/></svg><h2>Evidence · The Worth Ledger</h2></div>
+        <div class="note" style="margin-top:0;margin-bottom:12px">When the low voice says you add nothing, it's lying by leaving things out. Log the small, real things — a kindness, a moment you showed up, something someone valued in you. Read them back when you can't see your own worth.</div>
+        <div id="worthList"></div>
+        <textarea id="worthNew" rows="2" placeholder="Something true, however small — &quot;I listened to a friend&quot;, &quot;I made my kid laugh&quot;, &quot;I kept a promise to myself.&quot;"></textarea>
+        <button class="ghost-btn" id="addWorth">+ Add to the ledger</button>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M12 5l7 7-7 7"/></svg><h2>One small, kind thing</h2></div>
+        <div class="note" style="margin-top:0;margin-bottom:12px">You don't have to fix the whole day. Pick one tiny action — for you or someone else — and just do that. Momentum, not transformation.</div>
+        <div id="anchorPrompt" class="refl-q" style="font-style:normal;font-size:15px;color:var(--text)">—</div>
+        <button class="lil-btn" id="anchorAnother"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg>Another idea</button>
+      </div>
+
+      <div class="card disc-card">
+        <div class="card-h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM21 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><h2>You're not meant to carry this alone</h2></div>
+        <div class="note" style="margin-top:0">Reaching out isn't weakness — it's one of the strongest, most human things you can do. Save someone you trust here, so they're one tap away on a hard day.</div>
+        <div class="field" style="margin-top:14px"><label>Someone I trust</label><input type="text" id="trustName" placeholder="Their name"/></div>
+        <div class="field"><label>How I'll reach them</label><input type="text" id="trustContact" placeholder="Phone number, or how you'll contact them"/></div>
+        <button class="solid-btn" id="saveTrust">Save my person</button>
+        <div id="trustShow"></div>
+        <div class="resources">
+          If this feels heavier than low — if you're having thoughts of harming yourself, or that you can't go on — please reach out to someone right now. In the UK &amp; Ireland you can call <b>Samaritans on 116 123</b>, free, any time of day or night. In an emergency, call <b>999</b>. You deserve support, and there are people who want to give it.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- codex reader overlay -->
+<div class="codex-wrap" id="codexWrap">
+  <div class="codex">
+    <div class="codex-bar">
+      <button id="codexBack" style="visibility:hidden">‹ Codex</button>
+      <span class="ttl" id="codexTitle">The Codex</span>
+      <button class="x" id="codexClose">×</button>
+    </div>
+    <div id="codexBody"></div>
+  </div>
 </div>
 
 <!-- nav -->
@@ -748,6 +859,7 @@ section.divider span{font-family:"Fraunces";font-style:italic;font-size:13px;col
   <button class="tab" data-view="system"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.5-2.3 1a7.5 7.5 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7.5 7.5 0 0 0-1.7 1l-2.3-1-2 3.5L4.6 11a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.5 2.3-1a7.5 7.5 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7.5 7.5 0 0 0 1.7-1l2.3 1 2-3.5Z"/></svg>System</button>
   <button class="tab" data-view="reflect"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.5A6 6 0 0 1 12 3Z"/></svg>Reflect</button>
   <button class="tab" data-view="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Progress</button>
+  <button class="tab" data-view="anchor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM12 8v13M5 12a7 7 0 0 0 14 0M5 12H3m16 0h2"/></svg>Anchor</button>
 </div></nav>
 
 <!-- identity modal -->
@@ -822,6 +934,9 @@ function save(){ Store.set(KEY,S); }
   if(!S.timerDur)S.timerDur=10;
   if(!S.favMaxims)S.favMaxims=[];
   if(S.rankSeen===undefined)S.rankSeen=0;
+  if(!S.worthLog)S.worthLog=[];
+  if(S.trustName===undefined)S.trustName="";
+  if(S.trustContact===undefined)S.trustContact="";
   save();
 })();
 
@@ -1450,6 +1565,99 @@ function renderProgress(){
   document.getElementById('stDisc').textContent=count(d=>d.disc);
 }
 
+/* ---------- anchor: steady section ---------- */
+const Breathe=(()=>{
+  const phases=[['Breathe in',1],['Hold',1],['Breathe out',.55],['Hold',.55]];
+  let t=null, step=0, rounds=0, running=false;
+  function set(){ const [w,s]=phases[step%4]; document.getElementById('breathWord').textContent=w; document.getElementById('breathOrb').style.transform='scale('+s+')'; }
+  function stop(){ running=false; clearInterval(t); document.getElementById('breathBtn').textContent='Begin · 4 rounds'; document.getElementById('breathWord').textContent='Ready'; document.getElementById('breathOrb').style.transform='scale(.55)'; }
+  return {
+    toggle(){
+      if(running){ stop(); return; }
+      running=true; step=0; rounds=0; set();
+      document.getElementById('breathBtn').textContent='Stop';
+      if(navigator.vibrate)navigator.vibrate(10);
+      t=setInterval(()=>{ step++; if(step%4===0)rounds++; if(rounds>=4){ stop(); toast('Four rounds. Notice the change.'); return; } set(); if(navigator.vibrate)navigator.vibrate(6); },4000);
+    }
+  };
+})();
+const ANCHOR_ACTIONS=[
+ "Drink a glass of water, then step outside for two minutes.",
+ "Send one message to someone you care about — no agenda, just hello.",
+ "Tidy one small surface. Just one — not the whole room.",
+ "Write down one thing you're glad exists today.",
+ "Do one quiet kind thing for someone, without telling them.",
+ "Put on a song you love and let it play the whole way through.",
+ "Make the bed, or wash a single dish — one small order against the fog.",
+ "Step into daylight for five minutes.",
+ "Stretch your body slowly for one minute. Just notice it.",
+ "Make a warm drink and hold it with both hands for a moment.",
+ "Open the window and take ten slow breaths of fresh air.",
+ "Name three things you can see, two you can hear, one you can feel."
+];
+function renderAnchorPrompt(){ document.getElementById('anchorPrompt').textContent=ANCHOR_ACTIONS[Math.floor(Math.random()*ANCHOR_ACTIONS.length)]; }
+function renderWorth(){
+  const el=document.getElementById('worthList'); if(!el) return;
+  if(!S.worthLog.length){ el.innerHTML='<div class="jrn-empty">Empty for now. Add one true thing — it becomes evidence you can return to.</div>'; return; }
+  el.innerHTML=[...S.worthLog].reverse().map((w)=>{
+    const realIdx=S.worthLog.indexOf(w);
+    const dt=new Date(w.d).toLocaleDateString(undefined,{month:'short',day:'numeric'});
+    return '<div class="worth-item"><div class="bd"><div class="wd">'+dt+'</div><div class="wt">'+esc(w.t)+'</div></div><div class="wx" data-delworth="'+realIdx+'">×</div></div>';
+  }).join('');
+}
+function renderTrust(){
+  document.getElementById('trustName').value=S.trustName||'';
+  document.getElementById('trustContact').value=S.trustContact||'';
+  const sh=document.getElementById('trustShow');
+  if(S.trustName){
+    const tel=(S.trustContact||'').replace(/[^\d+]/g,'');
+    const contact = tel.length>=5 ? '<a href="tel:'+tel+'">'+esc(S.trustContact)+'</a>' : esc(S.trustContact||'');
+    sh.innerHTML='<div class="trust-show">On a hard day, reach <b>'+esc(S.trustName)+'</b>'+(S.trustContact?' — '+contact:'')+'. You don\'t need the perfect words. &quot;I\'m having a rough one&quot; is enough.</div>';
+  } else sh.innerHTML='';
+}
+function renderAnchor(){ renderWorth(); renderTrust(); if(document.getElementById('anchorPrompt').textContent==='—') renderAnchorPrompt(); }
+
+/* ---------- codex reader ---------- */
+const READINGS=[
+ {id:'machiavelli', title:'Niccolò Machiavelli', yr:'1469–1527 · Florence', sub:'Power, virtù, and the world as it is',
+  html:`<p>Niccolò Machiavelli was a Florentine diplomat, political theorist, and writer whose name became a byword for cunning — often unfairly so. Here's what matters.</p>
+  <h3>Life and context</h3>
+  <p>He served as a senior official in the Republic of Florence for 14 years, handling diplomacy and military affairs. When the Medici family returned to power in 1512, he was dismissed, accused of conspiracy, imprisoned, and tortured. He spent his later years writing in rural exile, hoping — mostly in vain — to win back a political post. That failure matters: his most famous book was partly a job application to the Medici.</p>
+  <h3>The Prince (1513)</h3>
+  <p>His notorious short treatise on how rulers gain and hold power. The key ideas:</p>
+  <ul>
+   <li><b>Realism over idealism.</b> He claimed to describe how people and politics actually behave, not how they should. Earlier "mirror for princes" books told rulers to be virtuous; he asked what actually works.</li>
+   <li><b>Virtù vs. fortuna.</b> "Virtù" doesn't mean virtue — it means skill, boldness, adaptability, the capacity to shape events. "Fortuna" is luck or circumstance. A great leader uses virtù to master fortuna.</li>
+   <li><b>The ends and the means.</b> A ruler must be willing to act immorally when necessary — to break promises, use cruelty efficiently, deceive — because the state's survival depends on it. He never quite says "the ends justify the means," but it captures the spirit.</li>
+   <li><b>Feared vs. loved.</b> If you can't be both, being feared is safer — provided you avoid being hated.</li>
+   <li><b>Cruelty "well used."</b> Harsh acts should be swift and decisive, not drawn out.</li>
+  </ul>
+  <h3>The Discourses on Livy</h3>
+  <p>Often overlooked, but arguably his deeper work. Here he praises republics, not princes — admiring Rome, civic participation, the rule of law, and even the productive value of social conflict between classes. This is why scholars debate whether he was a cynical advisor to tyrants or a committed republican. The likeliest reading: he preferred republics, but wrote The Prince for the world as he found it.</p>
+  <h3>"Machiavellian" vs. Machiavelli</h3>
+  <p>The adjective means scheming and unscrupulous. But that caricature flattens him. He wasn't celebrating evil; he was insisting that politics operates by different rules than private morality, and that pretending otherwise gets people killed.</p>
+  <div class="pull">Whether that's clear-eyed honesty or dangerous amorality is the enduring argument.</div>
+  <h3>Why he still matters</h3>
+  <p>He's often called the founder of modern political science, for separating politics from theology and ethics and analysing power empirically. He also wrote history, poetry, and a successful bawdy comedy (Mandragola) — so the grim reputation undersells a sharp, witty mind.</p>`}
+];
+function openCodex(){ document.getElementById('codexWrap').classList.add('open'); showCodexList(); }
+function closeCodex(){ document.getElementById('codexWrap').classList.remove('open'); }
+function showCodexList(){
+  document.getElementById('codexTitle').textContent='The Codex';
+  document.getElementById('codexBack').style.visibility='hidden';
+  document.getElementById('codexBody').innerHTML=
+   '<p class="note" style="margin:0 0 16px">Long-form readings on strategy, philosophy, and the examined life.</p>'+
+   READINGS.map(r=>'<div class="reading-item" data-read="'+r.id+'"><div class="yr">'+esc(r.yr)+'</div><h3>'+esc(r.title)+'</h3><p>'+esc(r.sub)+'</p></div>').join('');
+  document.getElementById('codexWrap').scrollTop=0;
+}
+function showReading(id){
+  const r=READINGS.find(x=>x.id===id); if(!r) return;
+  document.getElementById('codexTitle').textContent='Codex';
+  document.getElementById('codexBack').style.visibility='visible';
+  document.getElementById('codexBody').innerHTML='<div class="article"><div class="at">'+esc(r.title)+'</div><div class="asub">'+esc(r.yr)+' · '+esc(r.sub)+'</div>'+r.html+'</div>';
+  document.getElementById('codexWrap').scrollTop=0;
+}
+
 /* ---------- stats helpers ---------- */
 function renderRecover(){
   const el=document.getElementById('recover'); if(!el) return;
@@ -1568,6 +1776,21 @@ document.addEventListener('click', e=>{
   // enable notifications
   if(t.closest('#enableNotif')){ askNotif(); return; }
 
+  // anchor: breathing, worth ledger, one-small-thing, trusted contact
+  if(t.closest('#breathBtn')){ Breathe.toggle(); return; }
+  if(t.closest('#anchorAnother')){ renderAnchorPrompt(); if(navigator.vibrate)navigator.vibrate(6); return; }
+  if(t.closest('#addWorth')){ const v=val('worthNew'); if(!v){ toast('Write one true thing first'); return; } S.worthLog.push({d:Date.now(),t:v}); clear(['worthNew']); save(); renderWorth(); celebrate('Added to your ledger'); return; }
+  const dw=t.closest('[data-delworth]');
+  if(dw){ S.worthLog.splice(+dw.dataset.delworth,1); save(); renderWorth(); return; }
+  if(t.closest('#saveTrust')){ S.trustName=val('trustName'); S.trustContact=val('trustContact'); save(); renderTrust(); if(S.trustName)celebrate('Saved. One tap away when you need them.'); return; }
+
+  // codex
+  if(t.closest('#codexBtn')){ openCodex(); return; }
+  if(t.closest('#codexClose')){ closeCodex(); return; }
+  if(t.closest('#codexBack')){ showCodexList(); return; }
+  const rd=t.closest('[data-read]');
+  if(rd){ showReading(rd.dataset.read); return; }
+
   // tabs
   const tab=t.closest('.tab');
   if(tab){ switchView(tab.dataset.view); return; }
@@ -1636,6 +1859,7 @@ function switchView(v){
   if(v==='system')renderSystem();
   if(v==='reflect')renderReflect();
   if(v==='progress'){ renderProgress(); renderJournal(); renderLadder(); renderTrends(); renderSaved(); }
+  if(v==='anchor') renderAnchor();
 }
 
 /* ---------- helpers ---------- */
@@ -1660,8 +1884,8 @@ function init(){
   setInterval(()=>{ const k=key(new Date()); if(k!==TODAY){ location.reload(); } },60000);
   // deep-link to a tab via #system / #reflect / #progress
   const h=(location.hash||'').replace('#','');
-  if(['system','reflect','progress'].includes(h)) switchView(h);
-  window.addEventListener('hashchange',()=>{ const hh=(location.hash||'').replace('#',''); if(['today','system','reflect','progress'].includes(hh)) switchView(hh); });
+  if(['system','reflect','progress','anchor'].includes(h)) switchView(h);
+  window.addEventListener('hashchange',()=>{ const hh=(location.hash||'').replace('#',''); if(['today','system','reflect','progress','anchor'].includes(hh)) switchView(hh); });
 }
 init();
 
